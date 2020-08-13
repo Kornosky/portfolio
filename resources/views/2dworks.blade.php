@@ -6,8 +6,6 @@
 
         <title>Laravel</title>
 
-        <script   type="module" src="{{ asset('https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js') }}"></script>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
@@ -15,89 +13,104 @@
         <link rel="stylesheet" href="css/body.css">
         <link href="/css/app.css" rel="stylesheet">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.4.2/Sortable.min.js"></script>
+        <script src="https://npmcdn.com/vue-sortable@latest"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">GAME DEV</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">2D WORKS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">3D WORKS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">BLOG</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">CONTACT</a>
-                  </li>
-                </ul>
-                <span class= "nav-right">
-                    <ul class="navbar-nav mr-auto">
-                    @if (Route::has('login'))
-                            @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/home') }}">Home</a>
+
+        <div id="app">
+            <div id="container">
+                <div id = "overlay">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                             </li>
-                            @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                <a class="nav-link" href="{{ route('login') }}">ABOUT</a>
                             </li>
-                                @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a  class="nav-link" href="{{ route('register') }}">Register</a>
-                                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">GAME DEV</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">2D WORKS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">3D WORKS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">CONTACT</a>
+                            </li>
+                            </ul>
+                            <span class= "nav-right">
+                                <ul class="navbar-nav mr-auto">
+                                @if (Route::has('login'))
+                                        @auth
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ url('/home') }}">Home</a>
+                                        </li>
+                                        @else
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                                        </li>
+                                            @if (Route::has('register'))
+                                            <li class="nav-item">
+                                                <a  class="nav-link" href="{{ route('register') }}">Register</a>
+                                            </li>
+                                            @endif
+                                        @endauth
                                 @endif
-                            @endauth
-                    @endif
+                                </ul>
+                            </span>
+                        </div>
+                    </nav>
+
+
+
+                    <h5 class="blockquote text-center text-light">
+                        I believe that all artistic mediums benefits from a strong understanding of 2D fundamentals. I strive to learn and practice shape language, defining silhouettes, clumping, and color to tell a story with each piece that I work on. Throughout the entire creative process, I push myself to heavily use reference so that I can draw from a larger pool of inspiration and to ensure that I'm learning from people with more mileage than me.
+                    </h5>
+
+                          <!-- Dialogue Box -->
+                          <div id = "dialogueBox" >
+                            <span class= "user-no-touch" style= "color: white" id="dialogueBox-text">
+                                Cat mew mew mew meow
+                            </span>
+                        </div>
+                    <!-- Gallery -->
+                    <ul id="photos" >
+                        <?php
+                        include('php/imageLoader.php');
+                        ?>
                     </ul>
-              </span>
+                    <!-- Submit button -->
+                    <div id="submit-container">
+                        <input type='button' class="btn-submit" value='Submit' id='submit' />
+                    </div>
+                </div>
+                 <!-- Canvas for 3D Elements -->
+                 <canvas id="c"></canvas>
+
             </div>
-          </nav>
 
 
-
-
- <!-- Dialogue Box -->
- <div id = "dialogueBox" >
-    <span class= "user-no-touch" style= "color: white" id="dialogueBox-text">
-        Cat mew mew mew meow
-    </span>
-</div>
-        <!-- Scripts -->
-        <script>document.body
-            .className += ' fade-out';</script>
-        <script  type="text/javascript" src="{{ URL::asset("https://unpkg.com/typewriter-effect@latest/dist/core.js") }}"></script>
-        <script   type="module" src="{{ asset('js/threeDbackground.js') }}"></script>
-        <script   type="module" src="{{ asset('js/dialogueBox.js') }}"></script>
-
-            <h5 class="blockquote text-center text-light">
-                I believe that all artistic mediums benefits from a strong understanding of 2D fundamentals. I strive to learn and practice shape language, defining silhouettes, clumping, and color to tell a story with each piece that I work on. Throughout the entire creative process, I push myself to heavily use reference so that I can draw from a larger pool of inspiration and to ensure that I'm learning from people with more mileage than me.
-            </h5>
-
-            <!-- Gallery -->
-<ul id="photos"></ul>
-<!-- Submit button -->
-<div id="submit-container">
-    <input type='button' class="btn-submit" value='Submit' id='submit' />
-</div>
-
-    <!-- Canvas for 3D Elements -->
-    <canvas id="c"></canvas>
+        </div>
+             <!-- Scripts -->
+             <script   type="module" src="{{ asset('js/app.js') }}"></script>
+             <script>document.body
+                .className += ' fade-out';</script>
+            <script  type="text/javascript" src="{{ URL::asset("https://unpkg.com/typewriter-effect@latest/dist/core.js") }}"></script>
+            <script   type="module" src="{{ asset('js/threeDbackground.js') }}"></script>
+            <script   type="module" src="{{ asset('js/dialogueBox.js') }}"></script>
 
         <script type="text/javascript">
 
@@ -285,6 +298,6 @@
         </script>
 
         <script   type="module" src="{{ asset('js/galleryLayout.js') }}"></script>
-        <script   type="module" src="{{ asset('js/app.js') }}"></script>
+
     </body>
 </html>

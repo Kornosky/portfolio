@@ -1,11 +1,15 @@
 #c {
-    position:absolute;
     pointer-events: none;
     z-index: 0;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
 }
-
+#container {
+    position: relative;
+  }
+  #container c, #overlay {
+    position: absolute;
+  }
 .elementToFadeIn{
     -webkit-animation: fadeinout .5s linear forwards;
     animation: fadeinout .5s linear forwards;
@@ -60,14 +64,14 @@
 
 #startButton{
     margin: 0;
-    position: absolute;
+    position: relative;
     top: 70%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 #dialogueBox{
-    position: absolute;
+    position: relative;
      z-index: 99;
      padding: 1%;
      left: 20%;
