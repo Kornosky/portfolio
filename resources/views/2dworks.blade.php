@@ -87,11 +87,13 @@
                             </span>
                         </div>
                     <!-- Gallery -->
-                    <ul id="photos" >
-                        <?php
-                        include('php/imageLoader.php');
-                        ?>
-                    </ul>
+                    <div id="imageContainer">
+                        <div id="photos" >
+                            <?php
+                            include('php/imageLoader.php');
+                            ?>
+                        </div>
+                    </div>
                     <!-- Submit button -->
                     <div id="submit-container">
                         <input type='button' class="btn-submit" value='Submit' id='submit' />

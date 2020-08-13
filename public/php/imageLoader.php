@@ -13,7 +13,7 @@
          $ext = strtolower(pathinfo($image, PATHINFO_EXTENSION));
          if (in_array($ext, $supported_file)) {
 
-             echo '<li> <img src="'.$image .'" alt="Random image" /> </li>';
+             echo ' <img style=\'height: 100%; width: 100%; object-fit: contain\' src="'.$image .'" alt="Random image" /> ';
             } else {
                 continue;
             }

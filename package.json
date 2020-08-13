@@ -10,22 +10,37 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "axios": "^0.19",
+        "@babel/preset-react": "^7.0.0",
+        "axios": "^0.18.1",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.1.0",
+        "babel-preset-env": "^1.7.0",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.19",
+        "lodash": "^4.17.20",
         "popper.js": "^1.12",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
         "resolve-url-loader": "^2.3.1",
         "sass": "^1.20.1",
-        "sass-loader": "^8.0.0",
-        "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "sass-loader": "^8.0.2",
+        "vue-loader": "^15.9.3",
+        "webpack": "^4.44.1"
     },
     "dependencies": {
-        "babel-loader": "^8.1.0",
         "terser": "^3.14.1",
-        "vue-loader": "^15.9.3"
+        "bootstrap": "^4.0.0",
+        "jquery": "^3.2",
+        "lodash": "^4.17.4",
+        "popper.js": "^1.12",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-dropzone": "^4.2.11",
+        "react-images": "^0.5.17",
+        "react-photo-gallery": "^6.0.28",
+        "react-router-dom": "^4.3.1",
+        "toastr": "^2.1.4"
     }
 }
