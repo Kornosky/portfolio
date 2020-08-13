@@ -26,22 +26,22 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/about') }}">ABOUT</a>
+                    <a class="nav-link" href="{{ route('login') }}">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/gameDev') }}">GAME DEV</a>
+                    <a class="nav-link" href="{{ route('login') }}">GAME DEV</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/2dworks') }}">2D WORKS</a>
+                    <a class="nav-link" href="{{ route('login') }}">2D WORKS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/3dworks') }}">3D WORKS</a>
+                    <a class="nav-link" href="{{ route('login') }}">3D WORKS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/blog') }}">BLOG</a>
+                    <a class="nav-link" href="{{ route('login') }}">BLOG</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/contact') }}">CONTACT</a>
+                    <a class="nav-link" href="{{ route('login') }}">CONTACT</a>
                   </li>
                 </ul>
                 <span class= "nav-right">
