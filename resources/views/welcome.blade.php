@@ -7,12 +7,11 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link   rel="stylesheet" src="{{ URL::asset('https://fonts.googleapis.com/css?family=Nunito:200,600') }}">
         <!-- Styles -->
 
-        <link   rel="stylesheet" src="{{ asset('css/app.js') }}"></link>
-        <link   rel="stylesheet" src="{{ asset('css/body.js') }}"></link>
+        <link   rel="stylesheet" src="{{ asset('css/app.js') }}">
+        <link   rel="stylesheet" src="{{ asset('css/body.js') }}">
 
     </head>
     <body>
