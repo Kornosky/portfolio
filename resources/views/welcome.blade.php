@@ -10,9 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="css/body.css">
-        <link   rel="stylesheet" src="{{ asset('css/app.js') }}"></link>
 
+        <link   rel="stylesheet" src="{{ asset('css/app.js') }}"></link>
+        <link   rel="stylesheet" src="{{ asset('css/body.js') }}"></link>
 
     </head>
     <body>
