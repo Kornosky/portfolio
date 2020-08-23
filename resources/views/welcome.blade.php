@@ -10,8 +10,8 @@
         <link   rel="stylesheet" src="{{ URL::asset('https://fonts.googleapis.com/css?family=Nunito:200,600') }}">
         <!-- Styles -->
 
-        <link   rel="stylesheet" src="{{ asset('css/app.js') }}">
-        <link   rel="stylesheet" src="{{ asset('css/body.js') }}">
+        <link   rel="stylesheet" src="{{ asset('css/app.css') }}">
+        <link   rel="stylesheet" src="{{ asset('css/body.css') }}">
 
     </head>
     <body>
