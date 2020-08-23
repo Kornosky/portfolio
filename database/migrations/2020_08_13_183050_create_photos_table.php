@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class CreatePhotosTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.d
      *
      * @return void
      */
