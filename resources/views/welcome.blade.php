@@ -11,7 +11,8 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="css/body.css">
-        <link href="/css/app.css" rel="stylesheet">
+        <link   rel="stylesheet" src="{{ asset('css/app.js') }}"></link>
+
 
     </head>
     <body>
@@ -104,6 +105,7 @@
 
         </section>
 
-        <script src="/js/app.js"></script>
+        <script   type="module" src="{{ asset('js/app.js') }}"></script>
+
     </body>
 </html>
