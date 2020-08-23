@@ -55,7 +55,7 @@ function main() {
   {
     const gltfLoader = new GLTFLoader();
     object = new THREE.Object3D();
-    gltfLoader.load('../public/models/UndeadKnight004.glb', (gltf) => {
+    gltfLoader.load('/models/UndeadKnight004.glb', (gltf) => {
       const root = gltf.scene;
       scene.add(root);
       object = root;
