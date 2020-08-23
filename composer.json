@@ -16,7 +16,8 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "nesbot/carbon": "^2.38",
-        "scrivo/highlight.php": "v9.18.1.1"
+        "scrivo/highlight.php": "v9.18.1.1",
+        "webdevetc/blogetc": "^8.1"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
