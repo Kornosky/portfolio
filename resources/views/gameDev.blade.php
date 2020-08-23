@@ -7,11 +7,11 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        <link   rel="stylesheet" href="{{ URL::asset('https://fonts.googleapis.com/css?family=Nunito:200,600') }}">
         <!-- Styles -->
-        <link rel="stylesheet" href="css/body.css">
-        <link href="/css/app.css" rel="stylesheet">
+
+        <link   rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link   rel="stylesheet" href="{{ asset('css/body.css') }}">
 
     </head>
     <body>
@@ -26,22 +26,22 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">ABOUT</a>
+                    <a class="nav-link" href="{{ url('/about') }}">ABOUT</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">GAME DEV</a>
+                    <a class="nav-link" href="{{ url('/gameDev') }}">GAME DEV</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">2D WORKS</a>
+                    <a class="nav-link" href="{{ url('/2dworks') }}">2D WORKS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">3D WORKS</a>
+                    <a class="nav-link" href="{{ url('/3dworks') }}">3D WORKS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">BLOG</a>
+                    <a class="nav-link" href="{{ url('/blog') }}">BLOG</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">CONTACT</a>
+                    <a class="nav-link" href="{{ url('/contact') }}">CONTACT</a>
                   </li>
                 </ul>
                 <span class= "nav-right">
@@ -104,6 +104,7 @@
 
         </section>
 
-        <script src="/js/app.js"></script>
+        <script   type="module" src="{{ asset('js/app.js') }}"></script>
+
     </body>
 </html>
