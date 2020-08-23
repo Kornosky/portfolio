@@ -22,15 +22,7 @@ $(document).ready(function () {
   });
 });
 
-new Vue({
-    id: 'photos',
 
-    methods: {
-      onUpdate: function (event) {
-        this.list.splice(event.newIndex, 0, this.list.splice(event.oldIndex, 1)[0])
-      }
-    }
-  });
 // $(window).ready(function () {
 //   var dropIndex;
 //   $("#photos").sortable({
